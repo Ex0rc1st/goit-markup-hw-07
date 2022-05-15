@@ -1,3 +1,7 @@
+.our-clients__title {
+    margin-bottom: 50px;
+}
+
 .our-clients-logo-link {
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
@@ -10,18 +14,17 @@
     width: 170px;
     height: 92px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+            border: 1px solid var(--action-color);
+            fill: var(--action-color);
+        }
+    
+    &:focus {
+        border: 1px solid var(--action-color);
+        fill: var(--action-color);
+    }
 }
 
-.our-clients-logo+.our-clients-logo {
+.our-clients-logo + .our-clients-logo {
     margin-left: 30px;
-}
-
-.our-clients-logo-link:hover {
-    border: 1px solid var(--action-color);
-    fill: var(--action-color);
-}
-
-.our-clients-logo-link:focus {
-    border: 1px solid var(--action-color);
-    fill: var(--action-color);
 }

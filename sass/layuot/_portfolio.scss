@@ -14,16 +14,14 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-    background-color: var(--action-color);
-    color: var(--background-main);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-        0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
+    &:hover,
+    &:focus {
+        background-color: var(--action-color);
+        color: var(--background-main);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
 }
 
 .portfolio-header {
@@ -46,26 +44,8 @@
     color: var(--primary-text-color);
 }
 
-.filter-list,
-.content-list {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.filter-list .item+.item {
+.filter-list .filter-list__item + .filter-list__item {
     margin-left: 8px;
-}
-
-.content .container-filter {
-    padding-top: 94px;
-    padding-bottom: 56px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .filter-list {
@@ -78,21 +58,20 @@
     margin-top: 50px;
     margin-left: calc(-1 * var(--content-box-margin));
     margin-top: calc(-1 * var(--content-box-margin));
-
 }
 
-.content-list .item {
+.content-list__item {
     flex-basis: calc(100% / 3 - 30px);
     margin-top: var(--content-box-margin);
     margin-left: var(--content-box-margin);
     background: var(--background-white);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.content-list .item:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+    &:hover {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
 }
 
 .content-text {
@@ -125,8 +104,9 @@
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: auto;
+
+    .content-list__item:hover & {
+            transform: translateY(0%);
+        }
 }
 
-.item:hover .content-thumb-text {
-    transform: translateY(0%);
-}

@@ -2,7 +2,7 @@
     padding-top: 0;
 }
 
-.our-work-title {
+.our-work__title {
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -14,19 +14,18 @@
     margin-bottom: 50px;
 }
 
-.our-work-list,
-.our-team-list {
+.our-work-list {
     display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.our-work-list .item+.item {
+.our-work-list .our-work-list__item + .our-work-list__item {
     margin-left: 30px;
 }
 
-.our-work-list .item {
+.our-work-list .our-work-list__item {
     position: relative;
 }
 
@@ -41,7 +40,7 @@
     justify-content: center;
 }
 
-.our-work-text {
+.our-work__text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;

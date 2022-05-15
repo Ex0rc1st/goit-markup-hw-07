@@ -1,4 +1,4 @@
-.peculiarities.title {
+.peculiarities__title {
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -11,28 +11,28 @@
     margin-bottom: 10px;
 }
 
-.peculiarities-text {
+.peculiarities__text {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
 
-.peculiarities-list {
+.peculiarities__list {
     display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.peculiarities-list .item {
+.peculiarities__item {
     width: 270px;
 }
 
-.peculiarities-list .item+.item {
+.peculiarities__list .peculiarities__item + .peculiarities__item {
     margin-left: 30px;
 }
 
-.peculiarities-item {
+.peculiarities__wrap {
     background-color: var(--background-our-team-section);
     width: 270px;
     height: 120px;
